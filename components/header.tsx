@@ -30,7 +30,7 @@ const Header = () => {
     }
   ]
   return (
-    <nav className={`sticky top-0 w-full h-12 md:h-20 bg-slate-950/50 backdrop-blur-lg text-white z-50`}>
+    <nav className={`sticky md:absolute top-0 w-full h-12 md:h-20 bg-slate-950/50 backdrop-blur-lg text-white z-50`}>
         <div className={`flex w-full h-full space-x-4 py-2 px-4 items-center justify-between md:justify-normal`}>
           <div className={`flex h-full space-x-4 items-center`}>
             <a href="/#">
@@ -42,11 +42,11 @@ const Header = () => {
             <Separator orientation="vertical" />
           </div>
 
-          <div className={`w-full h-full hidden md:flex items-center justify-between text-sm lg:px-10`}>
+          <div className={`w-full h-full hidden md:flex items-center justify-around text-sm`}>
             {
               destinations.map((dest, index) => (
                 <>
-                  <Link href={`${dest.slug}`} key={index} className={`nav__link relative flex items-center h-full before:absolute before:w-full before:h-1 before:bg-red-700 before:bottom-0 before:origin-center before:duration-200 ease-linear ${pathname === dest.slug ? 'font-bold' : 'before:scale-x-0 hover:before:scale-x-100'}`}>
+                  <Link href={`${dest.slug}`} key={index} className={`nav__link relative flex items-center justify-center h-full before:absolute before:w-full before:h-1 before:bg-red-700 before:bottom-0 before:origin-center before:duration-200 ease-linear ${pathname === dest.slug ? 'font-bold' : 'before:scale-x-0 hover:before:scale-x-100'}`}>
                     {dest.text}
                   </Link>
                   {index != 3 && 
@@ -70,8 +70,8 @@ const Header = () => {
           <div className={`flex flex-col h-full justify-around items-center`}>
             {
               destinations.map((dest, index) => (
-                <div className={`w-[50%] flex flex-col gap-4 duration-200 ease-linear hover:opacity-85 hover:bg-slate-900 p-3 rounded-xl`} key={index}>
-                  <Link href={`${dest.slug}`} className={`flex justify-center`}>
+                <div className={`w-[75%] flex flex-col gap-4 duration-200 ease-linear hover:opacity-85 hover:bg-slate-900 p-3 rounded-xl`} key={index}>
+                  <Link href={`${dest.slug}`} className={`flex justify-center text-sm`}>
                     {dest.text}
                   </Link>
                   <Separator />
