@@ -3,8 +3,9 @@ import { Inter as FontSans } from "next/font/google";
 import { cn } from '../lib/utils'
 import "../styles/globals.css";
 import { Header } from "@/components/index";
+import { NextFontWithVariable } from "next/dist/compiled/@next/font";
 
-export const fontSans = FontSans({ subsets: ["latin"], variable: "--font-sans" });
+const fontSans: NextFontWithVariable = FontSans({ subsets: ["latin"], variable: "--font-sans" });
 
 export const metadata: Metadata = {
   title: "Przemysław Zakrzewski ",
