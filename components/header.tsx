@@ -71,7 +71,7 @@ const Header = () => {
             {
               destinations.map((dest, index) => (
                 <div className={`w-[75%] flex flex-col gap-4 duration-200 ease-linear hover:opacity-85 hover:bg-slate-900 p-3 rounded-xl`} key={index}>
-                  <Link href={`${dest.slug}`} className={`flex justify-center text-sm`}>
+                  <Link href={`${dest.slug}`} className={`flex justify-center text-sm`} onClick={() => setOpen(prev => !prev)}>
                     {dest.text}
                   </Link>
                   <Separator />
