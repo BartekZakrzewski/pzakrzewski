@@ -19,10 +19,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={cn(
+      <body className={`${cn(
         "min-h-screen bg-slate-950 font-sans antialiased",
         fontSans.variable
-      )}>
+      )} overflow-x-hidden`}>
         <Header />
         {children}
       </body>
