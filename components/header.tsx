@@ -70,8 +70,8 @@ const Header = () => {
           <div className={`flex flex-col h-full justify-around items-center`}>
             {
               destinations.map((dest, index) => (
-                <div className={`w-[50%] flex flex-col gap-4 duration-200 ease-linear hover:opacity-85 hover:bg-slate-900 p-3 rounded-xl`}>
-                  <Link href={`${dest.slug}`} key={index} className={`flex justify-center`}>
+                <div className={`w-[50%] flex flex-col gap-4 duration-200 ease-linear hover:opacity-85 hover:bg-slate-900 p-3 rounded-xl`} key={index}>
+                  <Link href={`${dest.slug}`} className={`flex justify-center`}>
                     {dest.text}
                   </Link>
                   <Separator />
