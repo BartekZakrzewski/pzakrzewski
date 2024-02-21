@@ -30,7 +30,7 @@ const Header = () => {
     }
   ]
   return (
-    <nav className={`sticky md:absolute top-0 w-full h-12 md:h-20 bg-slate-950/50 backdrop-blur-lg text-white z-50`}>
+    <nav className={`fixed top-0 w-full h-12 md:h-20 bg-slate-950/50 backdrop-blur-lg text-white z-50`}>
         <div className={`flex w-full h-full space-x-4 py-2 px-4 items-center justify-between md:justify-normal`}>
           <div className={`flex h-full space-x-4 items-center`}>
             <a href="/#">
@@ -50,7 +50,7 @@ const Header = () => {
                     {dest.text}
                   </Link>
                   {index != 3 && 
-                    <Separator orientation="vertical" className={`h-4 opacity-50`} />
+                    <Separator orientation="vertical" className={`h-4 opacity-50`} key={index} />
                   }
                 </>
                 
