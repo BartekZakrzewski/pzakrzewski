@@ -11,7 +11,7 @@ const Home = () => {
   const [isFirstRender, setFirstRender] = useState<boolean>(true);
   const observerRef = useRef<null | HTMLHeadingElement>(null);
   const countUpRef = useRef<HTMLDivElement | null>(null);
-  
+
   const { start } = useCountUp({
     ref: countUpRef,
     start: 7,
@@ -97,7 +97,7 @@ const Home = () => {
       </section>
 
 
-      <Parallax blur={5} strength={600} bgImage={`https://images.unsplash.com/photo-1551135049-8a33b5883817?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D`} bgStyle={{objectFit: "cover"}} bgClassName={`object-cover opacity-70`}>
+      <Parallax blur={5} strength={300} bgImage={`https://images.unsplash.com/photo-1551135049-8a33b5883817?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D`} bgStyle={{objectFit: "cover"}} bgClassName={`object-cover opacity-70`}>
         <div className={`h-screen relative quote sm:h-[75svh] grid grid-rows-3 md:grid-rows-none md:grid-cols-3 md:place-content-center w-full justify-items-start gap-2 p-2 `}>
           {quotes.map((q: {quote: string, quoter: string, offset: number}, index: number) => (
             <Quote quote={q.quote} quoter={q.quoter} offset={q.offset} key={index} />
