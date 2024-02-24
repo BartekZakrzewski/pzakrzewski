@@ -11,6 +11,7 @@ const Home = () => {
   const [isFirstRender, setFirstRender] = useState<boolean>(true);
   const observerRef = useRef<null | HTMLHeadingElement>(null);
   const countUpRef = useRef<HTMLDivElement | null>(null);
+  
   const { start } = useCountUp({
     ref: countUpRef,
     start: 7,
