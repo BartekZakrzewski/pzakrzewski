@@ -1,6 +1,59 @@
-import Image from "next/image"
+"use client";
+
+import { Quote } from "../components/index";
+import Image from "next/image";
+import { useEffect, useRef, useState } from "react";
+import { useCountUp } from 'react-countup';
+import { Parallax } from 'react-parallax';
 
 const Home = () => {
+  const [isVisible, setVisible] = useState<boolean>(false);
+  const [isFirstRender, setFirstRender] = useState<boolean>(true);
+  const observerRef = useRef<null | HTMLHeadingElement>(null);
+  const countUpRef = useRef<HTMLDivElement | null>(null);
+  const { start } = useCountUp({
+    ref: countUpRef,
+    start: 7,
+    end: 30,
+    suffix: "K",
+  });
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      const entry = entries[0]
+      setVisible(entry.isIntersecting);
+    })
+    if(observerRef.current) observer.observe(observerRef.current);
+    return () => {
+      if(observerRef.current) observer.unobserve(observerRef.current);
+    }
+  }, [])
+
+  useEffect(() => {
+    if(isVisible && isFirstRender) {
+      start();
+      if(isFirstRender) setFirstRender(false);
+    }
+  }, [isVisible])
+
+  const quotes = [
+    {
+      quote: "Jeśli chodzi o wpływ konkursu na moją ścieżkę zawodową, to na pewno wyróżnienie w konkursie dało mi pewność siebie, wiarę w to, że jestem kompetentny do prowadzenia samodzielnej pracy badawczo-rozwojowej.",
+      quoter: "MGR INŻ. PAWEŁ ZIELONKA, LAUREAT EDYCJI 2013/2014",
+      offset: -1
+    },
+    {
+      quote: "Poczułem się ogromnie doceniony, gdy okazało się, że Jury Konkursu doceniło właśnie moją pracę. Dla naukowca jest to ważny aspekt motywacyjny, pozwalający uwierzyć, że to, co robimy, ma jednak jakiś sens – a podczas pracy naukowej mamy niewątpliwie dużo momentów zwątpienia.",
+      quoter: "DR HAB. INŻ. GRZEGORZ SOBOŃ, LAUREAT EDYCJI 2013/2014",
+      offset: 0
+    },
+    {
+      quote: "Od czasu zdobycia nagrody ABB udało mi się zdobyć finansowanie własnego projektu naukowego, poszerzyć międzynarodową sieć kontaktów i zdecydowanie zwiększyć dorobek naukowy.",
+      quoter: "DR INŻ. MAREK WODZIŃSKI, LAUREAT EDYCJI 2021/2022",
+      offset: 1
+    }
+  ]
+
   return (
     <div className={`z-0`}>
       <main className={`landing__page w-full aspect-video bg-cover bg-center grid place-content-center `}>
@@ -20,17 +73,17 @@ const Home = () => {
         </div>
 
         <div className={`w-full h-full flex flex-col md:flex-row md:items-stretch md:justify-between md:max-w-[75%]`}>
-          <div className={`text-slate-950 font-bold text-xl py-3 px-10 bg-slate-300 flex flex-col items-center w-full md:max-w-96 md:min-h-full md:justify-center gap-2`}>
+          <div className={`text-zinc-200 font-bold text-xl py-3 px-10 bg-black flex flex-col items-center w-full md:max-w-96 md:min-h-full md:justify-center gap-2`}>
               <h3 className={`text-2xl text-center`}>
                 Nagroda Główna
               </h3>
-              <h2 className={`font-bold text-red-600 text-5xl text-center`}>
-                30K
+              <h2 className={`font-bold text-red-600 text-5xl text-center`} ref={observerRef}>
+                <div ref={countUpRef} />
               </h2>
               <h3 className={`text-2xl mb-10 text-center`}>
                 Wsparcie dla rozwoju naukowego
               </h3>
-              <p className={`font-light text-slate-900 text-center`}>
+              <p className={`font-light text-zinc-400 text-center`}>
                 Wygrana stanowi dla laureatów i laureatek zarówno istotną motywację do kontynuowania kariery naukowej, jak również buduje prestiż wokół ich działalności i pozwala na sfinansowanie projektów.
               </p>
           </div>
@@ -40,6 +93,19 @@ const Home = () => {
             <Image src={'/images/engineer2.jpg'} width={1920} height={1080} alt="engineer" className={`max-w-[90%]`} />
           </div>
         </div>
+      </section>
+
+
+      <Parallax blur={5} strength={600} bgImage={`https://images.unsplash.com/photo-1551135049-8a33b5883817?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D`} bgStyle={{objectFit: "cover"}} bgClassName={`object-cover opacity-70`}>
+        <div className={`h-screen relative quote sm:h-[75svh] grid grid-rows-3 md:grid-rows-none md:grid-cols-3 md:place-content-center w-full justify-items-start gap-2 p-2 `}>
+          {quotes.map((q: {quote: string, quoter: string, offset: number}, index: number) => (
+            <Quote quote={q.quote} quoter={q.quoter} offset={q.offset} key={index} />
+          ))}
+        </div>
+      </Parallax>
+
+      <section className={`h-screen`}>
+
       </section>
       
     </div>
