@@ -60,28 +60,28 @@ const Home = () => {
   const facts = [
     {
       icon: <FaGraduationCap />,
-      num: 51,
+      num: '51',
       desc: 'Liczba zaangażowanych uczelni',
     },
     {
       icon: <FaSchool />,
-      num: 25,
+      num: '25',
       desc: 'Liczba miast biorących udział',
     },
     {
       icon: <FaTrophy />,
-      num: 1035000,
+      num: '1,035,000',
       desc: 'Łączny koszt nagród',
     },
     {
       icon: <GrCertificate />,
-      num: 2283,
+      num: '2,283',
       desc: 'Liczba nadesłanych prac',
     }
   ]
 
   return (
-    <div className={`z-0`}>
+    <div className={`z-0 pt-12 md:pt-0`}>
       <main className={`landing__page w-full aspect-video bg-cover bg-center grid place-content-center `}>
         <h1 className={`text-white font-bold text-xl md:text-3xl xl:text-6xl relative before:w-20 before:h-2 md:before:w-24 md:before:h-2 xl:before:w-32 xl:before:h-3 before:bg-red-700 before:absolute before:-top-5 before:left-[50%] before:-translate-x-[50%]`}>
           Wyjątkowa inicjatywa dla społeczności

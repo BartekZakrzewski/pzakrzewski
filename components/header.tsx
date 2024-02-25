@@ -30,7 +30,7 @@ const Header = () => {
     }
   ]
   return (
-    <nav className={`fixed top-0 w-full h-12 md:h-20 bg-slate-950/50 backdrop-blur-lg text-white z-50`}>
+    <nav className={`fixed w-full h-12 md:h-12 bg-slate-950/50 backdrop-blur-lg text-white z-50`}>
         <div className={`flex w-full h-full space-x-4 py-2 px-4 items-center justify-between md:justify-normal`}>
           <div className={`flex h-full space-x-4 items-center`}>
             <a href="/#">
@@ -67,14 +67,13 @@ const Header = () => {
           <button className={`menu__button text-2xl w-full`} onClick={() => setOpen(prev => !prev)}>
             <HiOutlineX />
           </button>
-          <div className={`flex flex-col h-full justify-around items-center`}>
+          <div className={`flex flex-col h-full justify-normal py-5 gap-5 items-start`}>
             {
               destinations.map((dest, index) => (
-                <div className={`w-[75%] flex flex-col gap-4 duration-200 ease-linear hover:opacity-85 hover:bg-slate-900 p-3 rounded-xl`} key={index}>
-                  <Link href={`${dest.slug}`} className={`flex justify-center text-sm`} onClick={() => setOpen(prev => !prev)}>
+                <div className={`w-full flex flex-col gap-4 duration-200 ease-linear hover:opacity-85  p-3 rounded-xl`} key={index}>
+                  <Link href={`${dest.slug}`} className={`flex justify-start text-sm p-3 rounded-lg ${pathname === dest.slug ? 'bg-slate-800/70' : 'hover:bg-slate-800/50'}`} onClick={() => setOpen(prev => !prev)}>
                     {dest.text}
                   </Link>
-                  <Separator />
                 </div>
               ))
             }
