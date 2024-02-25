@@ -22,7 +22,7 @@ export default function RootLayout({
       <body className={`${cn(
         "min-h-screen bg-slate-950 font-sans antialiased",
         fontSans.variable
-      )} overflow-x-hidden relative`}>
+      )} overflow-hidden relative`}>
         <Header />
         {children}
       </body>
