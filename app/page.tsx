@@ -5,6 +5,8 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { useCountUp } from 'react-countup';
 import { Parallax } from 'react-parallax';
+import { FaGraduationCap, FaSchool, FaTrophy  } from "react-icons/fa";
+import { GrCertificate } from "react-icons/gr";
 
 const Home = () => {
   const [isVisible, setVisible] = useState<boolean>(false);
@@ -52,6 +54,29 @@ const Home = () => {
       quote: "Od czasu zdobycia nagrody ABB udało mi się zdobyć finansowanie własnego projektu naukowego, poszerzyć międzynarodową sieć kontaktów i zdecydowanie zwiększyć dorobek naukowy.",
       quoter: "DR INŻ. MAREK WODZIŃSKI, LAUREAT EDYCJI 2021/2022",
       offset: 1
+    }
+  ]
+
+  const facts = [
+    {
+      icon: <FaGraduationCap />,
+      num: 51,
+      desc: 'Liczba zaangażowanych uczelni',
+    },
+    {
+      icon: <FaSchool />,
+      num: 25,
+      desc: 'Liczba miast biorących udział',
+    },
+    {
+      icon: <FaTrophy />,
+      num: 1035000,
+      desc: 'Łączny koszt nagród',
+    },
+    {
+      icon: <GrCertificate />,
+      num: 2283,
+      desc: 'Liczba nadesłanych prac',
     }
   ]
 
@@ -105,7 +130,38 @@ const Home = () => {
         </div>
       </Parallax>
 
-      <section className={`h-screen`}>
+      <section>
+        <div className={`text-slate-300 flex flex-col items-center lg:items-start lg:flex-row justify-center gap-14 p-14`}>
+          <h3 className={`text-white font-bold text-2xl`}>Budowanie wspólnej przyszłości</h3>
+          <div className={`max-w-screen-sm flex flex-col gap-3`}>
+            <p>
+              Dla nas, jako globalnej firmy technologicznej, konkurs jest niepowtarzalną okazją do wsparcia nauki oraz manifestacją wartości, jakie reprezentujemy. 
+            </p>
+            <p>
+              Dwudziestojednoletnie, aktywne zaangażowanie w rozwój przyszłych liderów inżynierii wyróżnia nas spośród innych firm i jest niewątpliwie powodem do dumy. Każda edycja jest świadectwem naszego zobowiązania do stworzenia lepszej przyszłości.
+            </p>
+            <p>
+              Poznaj nas lepiej <a href="https://new.abb.com/pl" target="_blank" className={`underline`}>ABB Group. Leading digital technologies for industry — ABB Group (global.abb)</a>
+            </p>
+          </div>
+        </div>
+
+        <div>
+          <h3 className={`text-white font-bold text-3xl text-center mb-10`}>
+            Imponujące fakty o konkursie
+          </h3>
+          <div className={`flex flex-col lg:flex-row justify-around p-10 gap-10 lg:gap-0`}>
+            {
+              facts.map((fact, index) => (
+                <div key={index} className={`text-white flex flex-col items-center`}>
+                  <div className={`text-6xl mb-7 text-slate-200`}>{fact.icon}</div>
+                  <span className={`text-red-600 font-bold text-3xl mb-1`}>{fact.num}</span>
+                  <p className={`font-light text-slate-300`}>{fact.desc}</p>
+                </div>
+              ))
+            }
+          </div>
+        </div>
 
       </section>
       
