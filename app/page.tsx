@@ -10,9 +10,11 @@ import { GrCertificate } from "react-icons/gr";
 
 const Home = () => {
   const [isVisible, setVisible] = useState<boolean>(false);
+  const [staggerVisible, setStaggerVisible] = useState<boolean>(false);
   const [isFirstRender, setFirstRender] = useState<boolean>(true);
   const observerRef = useRef<null | HTMLHeadingElement>(null);
   const countUpRef = useRef<HTMLDivElement | null>(null);
+  const staggerObserverRef = useRef<HTMLDivElement | null>(null);
 
   const { start } = useCountUp({
     ref: countUpRef,
@@ -26,9 +28,17 @@ const Home = () => {
       const entry = entries[0]
       setVisible(entry.isIntersecting);
     })
+
+    const staggerObserver = new IntersectionObserver(entries => {
+      const entry = entries[0];
+      setStaggerVisible(entry.isIntersecting);
+    })
+
+    if(staggerObserverRef.current) staggerObserver.observe(staggerObserverRef.current);
     if(observerRef.current) observer.observe(observerRef.current);
     return () => {
       if(observerRef.current) observer.unobserve(observerRef.current);
+      if(staggerObserverRef.current) observer.unobserve(staggerObserverRef.current);
     }
   }, [])
 
@@ -61,21 +71,25 @@ const Home = () => {
     {
       icon: <FaGraduationCap />,
       num: '51',
+      delay: 0,
       desc: 'Liczba zaangażowanych uczelni',
     },
     {
       icon: <FaSchool />,
       num: '25',
+      delay: 300,
       desc: 'Liczba miast biorących udział',
     },
     {
       icon: <FaTrophy />,
       num: '1,035,000',
+      delay: 700,
       desc: 'Łączny koszt nagród',
     },
     {
       icon: <GrCertificate />,
       num: '2,283',
+      delay: 1000,
       desc: 'Liczba nadesłanych prac',
     }
   ]
@@ -146,14 +160,14 @@ const Home = () => {
           </div>
         </div>
 
-        <div>
+        <div ref={staggerObserverRef}>
           <h3 className={`text-white font-bold text-3xl text-center mb-10`}>
             Imponujące fakty o konkursie
           </h3>
           <div className={`flex flex-col lg:flex-row justify-around p-10 gap-10 lg:gap-0`}>
             {
               facts.map((fact, index) => (
-                <div key={index} className={`text-white flex flex-col items-center`}>
+                <div key={index} className={`text-white flex flex-col origin-bottom items-center delay-500 duration-500 ${staggerVisible ? 'scale-1 opacity-1' : 'scale-0 opacity-0'}`}>
                   <div className={`text-6xl mb-7 text-slate-200`}>{fact.icon}</div>
                   <span className={`text-red-600 font-bold text-3xl mb-1`}>{fact.num}</span>
                   <p className={`font-light text-slate-300`}>{fact.desc}</p>
