@@ -5,8 +5,7 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { useCountUp } from 'react-countup';
 import { Parallax } from 'react-parallax';
-import { FaGraduationCap, FaSchool, FaTrophy  } from "react-icons/fa";
-import { GrCertificate } from "react-icons/gr";
+import { quotes, facts } from "../lib/data";
 
 const Home = () => {
   const [isVisible, setVisible] = useState<boolean>(false);
@@ -48,51 +47,6 @@ const Home = () => {
       if(isFirstRender) setFirstRender(false);
     }
   }, [isVisible])
-
-  const quotes = [
-    {
-      quote: "Jeśli chodzi o wpływ konkursu na moją ścieżkę zawodową, to na pewno wyróżnienie w konkursie dało mi pewność siebie, wiarę w to, że jestem kompetentny do prowadzenia samodzielnej pracy badawczo-rozwojowej.",
-      quoter: "MGR INŻ. PAWEŁ ZIELONKA, LAUREAT EDYCJI 2013/2014",
-      offset: -1
-    },
-    {
-      quote: "Poczułem się ogromnie doceniony, gdy okazało się, że Jury Konkursu doceniło właśnie moją pracę. Dla naukowca jest to ważny aspekt motywacyjny, pozwalający uwierzyć, że to, co robimy, ma jednak jakiś sens – a podczas pracy naukowej mamy niewątpliwie dużo momentów zwątpienia.",
-      quoter: "DR HAB. INŻ. GRZEGORZ SOBOŃ, LAUREAT EDYCJI 2013/2014",
-      offset: 0
-    },
-    {
-      quote: "Od czasu zdobycia nagrody ABB udało mi się zdobyć finansowanie własnego projektu naukowego, poszerzyć międzynarodową sieć kontaktów i zdecydowanie zwiększyć dorobek naukowy.",
-      quoter: "DR INŻ. MAREK WODZIŃSKI, LAUREAT EDYCJI 2021/2022",
-      offset: 1
-    }
-  ]
-
-  const facts = [
-    {
-      icon: <FaGraduationCap />,
-      num: '51',
-      delay: 0,
-      desc: 'Liczba zaangażowanych uczelni',
-    },
-    {
-      icon: <FaSchool />,
-      num: '25',
-      delay: 300,
-      desc: 'Liczba miast biorących udział',
-    },
-    {
-      icon: <FaTrophy />,
-      num: '1,035,000',
-      delay: 700,
-      desc: 'Łączny koszt nagród',
-    },
-    {
-      icon: <GrCertificate />,
-      num: '2,283',
-      delay: 1000,
-      desc: 'Liczba nadesłanych prac',
-    }
-  ]
 
   return (
     <>
