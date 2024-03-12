@@ -11,7 +11,7 @@ const Page = () => {
         <div className={`z-0`}>
             <main className={`w-full bg-[url('https://images.unsplash.com/photo-1508791290064-c27cc1ef7a9a?q=80&w=2074&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] aspect-[4/3] md:aspect-video lg:aspect-[300/100] bg-cover bg-center grid place-content-center `}>
                 <h1 className={`text-white font-bold text-xl md:text-3xl xl:text-6xl relative before:w-20 before:h-2 md:before:w-24 md:before:h-2 xl:before:w-32 xl:before:h-3 before:bg-red-700 before:absolute before:-top-5 before:left-[50%] before:-translate-x-[50%]`}>
-                Wyjątkowa inicjatywa dla społeczności
+                    Warunki i etapy konkursu
                 </h1>
             </main>
 
@@ -84,7 +84,7 @@ const Page = () => {
                             <p className={`mb-5 p-2`}>
                                 Do II etapu zostanie zakwalifikowanych maksymalnie 30 prac. Laureaci I Etapu zostaną powiadomieni za pośrednictwem poczty elektronicznej do dnia 31.01.2024 roku.
                             </p>
-                            <Link href={`/warunki-i-etapu-konkursu#`} className={`m-2 ${buttonVariants({ variant: 'contest' })}`}>Wypełnij formularz</Link>
+                            <Link href={`/warunki-i-etapu-konkursu#`} className={`mx-2 mb-2 ${buttonVariants({ variant: 'contest' })}`}>Wypełnij formularz</Link>
                         </div>
                     </div>
 
@@ -143,7 +143,7 @@ const Page = () => {
                         Załączniki do pobrania
                     </h4>
 
-                    <div className={`pb-10 flex items-center justify-center space-x-2`}>
+                    <div className={`pb-10 grid grid-cols-2 gap-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5`}>
                         {
                             badges.map((badge, index) => (
                                 <Badge variant={'link'} key={index}>
