@@ -13,12 +13,12 @@ const Header = () => {
 
   const destinations = [
     {
-      text: "Konkurs o nagrodę ABB",
-      slug: "/konkurs-o-nagrode-abb"
+      text: "15-minutowe cyfrowe miasto",
+      slug: "/",
     },
     {
-      text: "Dlaczego warto wziąć udział",
-      slug: "/",
+      text: "Konkurs o nagrodę ABB",
+      slug: "/konkurs-o-nagrode-abb"
     },
     {
       text: "Warunki i etapy konkursu",

@@ -5,17 +5,37 @@ import { buttonVariants } from "@/components/ui/button";
 import Link from "next/link";
 import { Parallax } from "react-parallax";
 import { Badge } from "@/components/ui/badge";
+import { CiTrophy } from "react-icons/ci";
 
 const Page = () => {
     return (
-        <div className={`z-0`}>
-            <main className={`w-full bg-[url('https://images.unsplash.com/photo-1508791290064-c27cc1ef7a9a?q=80&w=2074&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] aspect-[4/3] md:aspect-video lg:aspect-[300/100] bg-cover bg-center grid place-content-center `}>
-                <h1 className={`text-white font-bold text-xl md:text-3xl xl:text-6xl relative before:w-20 before:h-2 md:before:w-24 md:before:h-2 xl:before:w-32 xl:before:h-3 before:bg-red-700 before:absolute before:-top-5 before:left-[50%] before:-translate-x-[50%]`}>
-                    Warunki i etapy konkursu
+        <div className={`z-0 bg-[url('https://images.unsplash.com/photo-1508791290064-c27cc1ef7a9a?q=80&w=2074&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-fixed bg-cover bg-center`}>
+            <main className={`w-full relative h-screen grid place-content-center p-2 md:px-10`}>
+                <h1 className={`text-white font-bold text-xl md:text-3xl xl:text-6xl relative before:w-20 before:h-2 md:before:w-24 md:before:h-2 xl:before:w-32 xl:before:h-3 before:bg-red-700 before:absolute before:-top-5 before:left-[50%] before:-translate-x-[50%] text-center`}>
+                    Dialog sektorowy, oparty na wspólnych wartościach zapewnia efekt synergii
                 </h1>
+
+                <div className={`absolute bottom-2 w-full flex justify-center items-center`}>
+                    <a href="#description" className={`text-white text-6xl opacity-20 animate-bounce`}>
+                        <CiTrophy />
+                    </a>
+                </div>
+                
             </main>
 
-            <section className={`text-slate-200 w-[90%] md:w-[75%] lg:w-[50%] mx-auto grid place-items-center gap-10 py-3`}>
+            <section id="description" className={``}>
+                <div>
+
+                </div>
+                <div>
+
+                </div>
+                <div>
+                    
+                </div>
+            </section>
+
+            {/* <section className={`text-slate-200 w-[90%] md:w-[75%] lg:w-[50%] mx-auto grid place-items-center gap-10 py-3`}>
                 <h2 className={`font-bold text-lg md:text-2xl lg:text-3xl`}>
                     Nagrody
                 </h2>
@@ -155,7 +175,7 @@ const Page = () => {
                         }
                     </div>
                 </div>
-            </section>
+            </section> */}
 
         </div>
     )

@@ -142,4 +142,42 @@ export const winners = [
         icon: <CiMedal />,
         caption: "Politechnika Krakowska im. Tadeusza Kościuszki Wydział Inżynierii i Technologii Chemicznej. Wyróżnienie za pracę doktorską, pt.: „Mikrofalowa synteza i badanie właściwości nowych biomateriałów chitozanowych jako uniwersalnych wyrobów medycznych.” Promotor pracy: prof. dr hab. inż. Dariusz Bogdał",
     },
+];
+
+export const bulletpoints_one = [
+    "Komfort życia i dobrostan ekonomiczny",
+    "Bezpieczeństwo",
+    "Edukacja",
+    "Mobilność",
+    "Estetyczny wygląd",
+    "Zrównoważony rozwój",
+    "Efektywność energetyczna"
+];
+
+export const bulletpoints_two = [
+    "Dzielnice i sąsiedztwa w duchu ESG, gospodarki cyrkularnej i zeroemisyjnej",
+    "Przemysł X.0 zintegrowany z globalnym łańcuchem wartości",
+    "Inteligentna transport, zintegrowana infrastruktura gotowa na nowy paradygmat mobilności",
+    "Cyfrowe e-usługi miejskie,  „na wyciągnięcie telefonu” z punktu widzenia mieszkańca",
+    "Usługi miejskie efektywne kosztowo dzięki „state-of-the-art” technologii przyszłości"
+];
+
+export const social_capital = [
+    {
+        icon: <CiTrophy />,
+        title: 'Compact City',
+        desc: 'Promowanie mądrego i przemyślanego zagęszczenia zabudowy miejskiej, efektywnego wykorzystanie przestrzeni, zmniejszania zależności od transportu samochodowego oraz tworzenie bardziej zrównoważonych, przyjaznych środowisku i efektywniejszych przestrzeni miejskich.',
+    }, {
+        icon: <CiTrophy />,
+        title: 'Inclusive City',
+        desc: 'Miasto otwarte, dostępne i równe dla wszystkich mieszkańców, niezależnie od ich pochodzenia, statusu społecznego, zdolności czy orientacji. Zapewnienie uczestnictwa wszystkich grup społecznych w życiu miejskim oraz eliminowaniu barier i nierówności.',
+    }, {
+        icon: <CiTrophy />,
+        title: 'Connected City',
+        desc: 'Technologia odgrywa kluczową rolę w zintegrowaniu różnych aspektów życia miejskiego. Miasto, w którym inteligentne systemy, technologie informacyjne i komunikacyjne są wykorzystywane w celu usprawnienia funkcjonowania, zwiększenia efektywności i poprawy jakości życia mieszkańców.',
+    }, {
+        icon: <CiTrophy />,
+        title: 'Vibrant City',
+        desc: 'Energią, życie, aktywności kulturalne i społeczne. Miasto, w którym panuje ożywiona atmosfera, a różnorodność działań, wydarzeń i inicjatyw przyczynia się do tworzenia dynamicznej społeczności.',
+    },
 ]
