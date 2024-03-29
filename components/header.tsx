@@ -17,18 +17,19 @@ const Header = () => {
       slug: "/",
     },
     {
-      text: "Konkurs o nagrodę ABB",
-      slug: "/konkurs-o-nagrode-abb"
+      text: "Kapitał Ludzki i Społeczny",
+      slug: "/kapital-ludzki-i-spoleczny"
     },
     {
-      text: "Warunki i etapy konkursu",
-      slug: "/warunki-i-etapy-konkursu",
+      text: "Dialog Sektorowy",
+      slug: "/dialog-sektorowy",
     },
     {
-      text: "Laureaci ostatnich edycji",
-      slug: "/laureaci-ostatnich-edycji"
+      text: "CityLab Sandbox",
+      slug: "/citylab-sandbox"
     }
-  ]
+  ];
+  
   return (
     <nav className={`fixed w-full h-12 md:h-12 bg-slate-950/50 backdrop-blur-lg text-white z-50`}>
         <div className={`flex w-full h-full space-x-4 py-2 px-4 items-center justify-between md:justify-normal`}>

@@ -180,4 +180,54 @@ export const social_capital = [
         title: 'Vibrant City',
         desc: 'Energią, życie, aktywności kulturalne i społeczne. Miasto, w którym panuje ożywiona atmosfera, a różnorodność działań, wydarzeń i inicjatyw przyczynia się do tworzenia dynamicznej społeczności.',
     },
+];
+
+export const sharing_values = [
+    {
+        icon: <CiTrophy />,
+        desc: 'Nowoczesne inteligentne miasto wymaga inteligentnego połączenia danych, ludzi i technologii w celu stworzenia zrównoważonych rozwiązań sprzyjających włączeniu społecznemu i generacji.',
+    },{
+        icon: <CiTrophy />,
+        desc: 'Wymaga to nowych, opartych na współpracy partnerstw w całym ekosystemie, w tym agencji publicznych i obywateli wraz ze specjalistami w dziedzinie cyfryzacji, technologii i inżynierii.',
+    },{
+        icon: <CiTrophy />,
+        desc: 'Wymaga to lokalnej wiedzy i spostrzeżeń połączonych z globalnym myśleniem i doświadczeniem.',
+    },
+];
+
+export const citylab_sandbox = [
+    "Inicjatywa - platforma mająca na celu stworzenie uproszczonych warunków dla firm zainteresowanych testowaniem w rzeczywistych miejskich warunkach innowacyjnych rozwiązań dla przedsiębiorstw i mieszkańców.",
+    "Obejmuje rozległe lokalne partnerstwo podmiotów publicznych  i prywatnych.",
+    'Jest "laboratorium innowacji" otwartym i rozpowszechnionym w wybranych miejscach miasta.',
+    "Dla firm zapewni jeden miejski punktu kontaktowy w celu uproszczenia procedur testowych.",
+    "Umożliwia uproszczony dostęp do przestrzeni publicznej i aktywów, w tym niematerialnych (procesów, usług i danych).",
+    'Umożliwia "skalowanie rozwiązań", promując je w ramach sieci i projektów na skalę lokalną,  krajową i międzynarodową.'
+];
+
+export const circular_info = [
+    {
+        icon: <CiTrophy />,
+        text: "Fintech & Komputery kwantowe",
+    },{
+        icon: <CiTrophy />,
+        text: "Station of the future (wodór, elektromobilność)",
+    },{
+        icon: <CiTrophy />,
+        text: "Bezdotykowe dostawy",
+    },{
+        icon: <CiTrophy />,
+        text: "Autonomiczna logistyka / transport",
+    },{
+        icon: <CiTrophy />,
+        text: "Zero emisyjne miasto",
+    },{
+        icon: <CiTrophy />,
+        text: "Miejski cyfrowy bliźniak",
+    },{
+        icon: <CiTrophy />,
+        text: "Pojazd-pojazd (V2V) i Pojazd-infrastruktura (V2I)",
+    },{
+        icon: <CiTrophy />,
+        text: "Miejska mobilność powietrzna (UAM)",
+    },
 ]
