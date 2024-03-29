@@ -4,7 +4,7 @@ import { Circle } from "../components/index";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { bulletpoints_one, bulletpoints_two } from "../lib/data";
-import { CiTrophy  } from "react-icons/ci";
+import { FaTree, FaPeopleGroup } from "react-icons/fa6";
 
 const Home = () => {
   const [isScrolled, setScrolled] = useState<boolean>(false);
@@ -33,9 +33,9 @@ const Home = () => {
 
       <section>
         <div className={`flex flex-col md:flex-row h-full p-2 md:p-10 lg:p-20 items-center`}>
-          <Circle Icon={<CiTrophy />} text={'Spełnianie i wyprzedzanie oczekiwań i wymagań mieszkańców.'} />
+          <Circle Icon={<FaTree />} text={'Spełnianie i wyprzedzanie oczekiwań i wymagań mieszkańców.'} />
           <div className={`bg-red-500 w-1 h-24 md:h-1 md:w-full`}></div>
-          <Circle Icon={<CiTrophy />} text={'W pełni połączone i zrównoważone systemy i usługi'} />
+          <Circle Icon={<FaPeopleGroup />} text={'W pełni połączone i zrównoważone systemy i usługi'} />
         </div>
       </section>
 

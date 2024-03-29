@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { CiTrophy } from "react-icons/ci";
+import { FaArrowDown } from "react-icons/fa";
 import { sharing_values } from "@/lib/data";
 
 const Page = () => {
@@ -13,8 +13,8 @@ const Page = () => {
                 </h1>
 
                 <div className={`absolute bottom-2 w-full flex justify-center items-center`}>
-                    <a href="#description" className={`text-white text-6xl opacity-20 animate-bounce`}>
-                        <CiTrophy />
+                    <a href="#description" className={`text-white text-4xl opacity-20 animate-bounce`}>
+                        <FaArrowDown />
                     </a>
                 </div>
                 
