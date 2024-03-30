@@ -13,7 +13,7 @@ const Page = () => {
                 </h1>
 
                 <div className={`absolute bottom-2 w-full flex justify-center items-center`}>
-                    <a href="#description" className={`text-white text-4xl opacity-20 animate-bounce`}>
+                    <a href="#description" className={`text-white text-4xl opacity-50 animate-bounce`}>
                         <FaArrowDown />
                     </a>
                 </div>

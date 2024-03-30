@@ -43,6 +43,14 @@ const Header = () => {
             <Separator orientation="vertical" />
           </div>
 
+          <div className={`md:hidden`}>
+            {
+              destinations.map((dest, index) => {
+                if(dest.slug == pathname) return <span key={index} className={`text-xs sm:text-sm font-bold relative after:absolute after:w-full after:h-1 after:bg-red-600/90 after:-bottom-1 after:left-0`}>{dest.text}</span>;
+              })
+            }
+          </div>
+
           <div className={`w-full h-full hidden md:flex items-center justify-around text-sm`}>
             {
               destinations.map((dest, index) => (
