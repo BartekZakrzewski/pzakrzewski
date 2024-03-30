@@ -13,9 +13,9 @@ const Page = () => {
             <section className={`p-3 bg-white/80 rounded-xl flex flex-col gap-10 w-full md:flex-row`}>
                 <ul className={`grid gap-10 font-bold w-full md:gap-2 md:w-3/4`}>
                     {
-                        citylab_sandbox.map((text, index) => (
+                        citylab_sandbox.map(({el}, index) => (
                             <li key={index}>
-                                {text}
+                                {el}
                             </li>
                         ))
                     }

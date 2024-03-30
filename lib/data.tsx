@@ -58,12 +58,12 @@ export const sharing_values = [
 ];
 
 export const citylab_sandbox = [
-    <span>Inicjatywa - platforma mająca na celu stworzenie uproszczonych warunków dla firm zainteresowanych <span className="bolden">testowaniem w rzeczywistych miejskich warunkach innowacyjnych rozwiązań</span> dla przedsiębiorstw i mieszkańców.</span>,
-    <span>Obejmuje rozległe lokalne <span className="bolden">partnerstwo</span> podmiotów publicznych  i prywatnych.</span>,
-    <span>Jest <span className="bolden">"laboratorium innowacji" otwartym</span> i rozpowszechnionym w wybranych miejscach miasta.</span>,
-    <span>Dla firm zapewni jeden <span className="bolden">miejski punktu kontaktowy</span> w celu uproszczenia procedur testowych.</span>,
-    <span>Umożliwia <span className="bolden">uproszczony dostęp</span> do przestrzeni publicznej i aktywów, w tym niematerialnych (procesów, usług i danych).</span>,
-    <span>Umożliwia <span className="bolden">"skalowanie rozwiązań"</span>, promując je w ramach sieci i projektów na skalę lokalną,  krajową i międzynarodową.</span>
+    {el: <span>Inicjatywa - platforma mająca na celu stworzenie uproszczonych warunków dla firm zainteresowanych <span className="bolden">testowaniem w rzeczywistych miejskich warunkach innowacyjnych rozwiązań</span> dla przedsiębiorstw i mieszkańców.</span>},
+    {el: <span>Obejmuje rozległe lokalne <span className="bolden">partnerstwo</span> podmiotów publicznych  i prywatnych.</span>},
+    {el: <span>Jest <span className="bolden">&quot;laboratorium innowacji&quot; otwartym</span> i rozpowszechnionym w wybranych miejscach miasta.</span>},
+    {el: <span>Dla firm zapewni jeden <span className="bolden">miejski punktu kontaktowy</span> w celu uproszczenia procedur testowych.</span>},
+    {el: <span>Umożliwia <span className="bolden">uproszczony dostęp</span> do przestrzeni publicznej i aktywów, w tym niematerialnych (procesów, usług i danych).</span>},
+    {el: <span>Umożliwia <span className="bolden">&quot;skalowanie rozwiązań&quot;</span>, promując je w ramach sieci i projektów na skalę lokalną,  krajową i międzynarodową.</span>}
 ];
 
 export const circular_info = [
