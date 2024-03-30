@@ -25,15 +25,14 @@ const Page = () => {
                     <h3 className={`p-3 underline text-lg font-bold`}>
                         Synergia społeczności
                     </h3>   
-                    <Image src={`/images/Graphic1.png`} alt="123" width={0} height={0} sizes="100vw" className={`w-full rounded-xl`} />
+                    <Image src={`/images/WhiteSpace.png`} alt="123" width={0} height={0} sizes="100vw" className={`w-full rounded-xl`} />
                 </div>
                 <div className={`p-3 w-full flex flex-col`}>
                     <h3 className={`p-3 underline text-lg font-bold`}>
                         Wspólna priorytezacja
                     </h3>
                     <div className={`flex gap-2`}>
-                        <Image src={`/images/Graphic2.png`} alt="123" width={0} height={0} sizes="100vw" className={`w-full h-auto rounded-xl`} />
-                        <Image src={`/images/Graphic3.png`} alt="123" width={0} height={0} sizes="100vw" className={`w-[30%] h-auto rounded-xl`} />
+                        <Image src={`/images/Holistic.png`} alt="123" width={0} height={0} sizes="100vw" className={`w-full h-auto rounded-xl`} />
                     </div>
                 </div>
                 <div className={`p-3`}>
