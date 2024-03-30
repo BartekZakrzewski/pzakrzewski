@@ -23,8 +23,7 @@ const Home = () => {
   }, [])
 
   return (
-    <>
-      <Image src={`https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D`} alt="123" layout="fill" objectFit="cover" className={`-z-10 fixed top-0`}/>
+    <div className={`z-0 bg-[url('/images/Background1.png')] bg-fixed bg-cover bg-center space-y-20`}>
       <main className={`w-full grid place-content-center p-56 z-10`}>
         <h1 className={`transition-all duration-100 text-white font-bold text-xl md:text-3xl xl:text-6xl relative before:h-2 md:before:h-2 xl:before:h-3 before:bg-red-700 before:absolute ${isScrolled ? 'before:w-10 md:before:w-12 xl:before:w-16 before:top-[50%] before:-left-24' : 'before:w-20 md:before:w-24 xl:before:w-32 before:-top-5 before:left-[50%] before:-translate-x-[50%]'}`}>
           Łódź „Ziemia Przemysłowego Ducha i Odważnych Pomysłów”
@@ -69,7 +68,7 @@ const Home = () => {
         </div>
       </section>
       
-    </>
+    </div>
   )
 }
 
