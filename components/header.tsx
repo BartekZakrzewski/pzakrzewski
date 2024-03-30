@@ -36,7 +36,7 @@ const Header = () => {
           <div className={`flex h-full space-x-4 items-center`}>
             <a href="/#">
               <Avatar>
-                  <AvatarImage src="/images/pzakrzewski-awatar.jpg" />
+                  <AvatarImage src="/images/Lodz-logo.jpg" />
                   <AvatarFallback>Przemysław Zakrzewski</AvatarFallback>
               </Avatar>    
             </a>
