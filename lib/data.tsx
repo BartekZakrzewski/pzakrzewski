@@ -47,23 +47,23 @@ export const social_capital = [
 export const sharing_values = [
     {
         icon: <FaConnectdevelop />,
-        desc: 'Nowoczesne inteligentne miasto wymaga inteligentnego połączenia danych, ludzi i technologii w celu stworzenia zrównoważonych rozwiązań sprzyjających włączeniu społecznemu i generacji.',
+        desc: <span>Nowoczesne inteligentne miasto wymaga inteligentnego <span className="bolden">połączenia danych, ludzi</span> i technologii w celu stworzenia zrównoważonych rozwiązań sprzyjających włączeniu społecznemu i generacji.</span>,
     },{
         icon: <FaHandshake />,
-        desc: 'Wymaga to nowych, opartych na współpracy partnerstw w całym ekosystemie, w tym agencji publicznych i obywateli wraz ze specjalistami w dziedzinie cyfryzacji, technologii i inżynierii.',
+        desc: <span>Wymaga to nowych, <span className="bolden">opartych na współpracy partnerstw w całym ekosystemie</span>, w tym agencji publicznych i obywateli wraz ze specjalistami w dziedzinie cyfryzacji, technologii i inżynierii.</span>,
     },{
         icon: <FaGear />,
-        desc: 'Wymaga to lokalnej wiedzy i spostrzeżeń połączonych z globalnym myśleniem i doświadczeniem.',
+        desc: <span>Wymaga to <span className="bolden">lokalnej wiedzy i spostrzeżeń połączonych z globalnym myśleniem i doświadczeniem.</span></span>,
     },
 ];
 
 export const citylab_sandbox = [
-    "Inicjatywa - platforma mająca na celu stworzenie uproszczonych warunków dla firm zainteresowanych testowaniem w rzeczywistych miejskich warunkach innowacyjnych rozwiązań dla przedsiębiorstw i mieszkańców.",
-    "Obejmuje rozległe lokalne partnerstwo podmiotów publicznych  i prywatnych.",
-    'Jest "laboratorium innowacji" otwartym i rozpowszechnionym w wybranych miejscach miasta.',
-    "Dla firm zapewni jeden miejski punktu kontaktowy w celu uproszczenia procedur testowych.",
-    "Umożliwia uproszczony dostęp do przestrzeni publicznej i aktywów, w tym niematerialnych (procesów, usług i danych).",
-    'Umożliwia "skalowanie rozwiązań", promując je w ramach sieci i projektów na skalę lokalną,  krajową i międzynarodową.'
+    <span>Inicjatywa - platforma mająca na celu stworzenie uproszczonych warunków dla firm zainteresowanych <span className="bolden">testowaniem w rzeczywistych miejskich warunkach innowacyjnych rozwiązań</span> dla przedsiębiorstw i mieszkańców.</span>,
+    <span>Obejmuje rozległe lokalne <span className="bolden">partnerstwo</span> podmiotów publicznych  i prywatnych.</span>,
+    <span>Jest <span className="bolden">"laboratorium innowacji" otwartym</span> i rozpowszechnionym w wybranych miejscach miasta.</span>,
+    <span>Dla firm zapewni jeden <span className="bolden">miejski punktu kontaktowy</span> w celu uproszczenia procedur testowych.</span>,
+    <span>Umożliwia <span className="bolden">uproszczony dostęp</span> do przestrzeni publicznej i aktywów, w tym niematerialnych (procesów, usług i danych).</span>,
+    <span>Umożliwia <span className="bolden">"skalowanie rozwiązań"</span>, promując je w ramach sieci i projektów na skalę lokalną,  krajową i międzynarodową.</span>
 ];
 
 export const circular_info = [

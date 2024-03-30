@@ -32,10 +32,14 @@ const Home = () => {
       </main>
 
       <section>
-        <div className={`flex flex-col md:flex-row h-full p-2 md:p-10 lg:p-20 items-center`}>
-          <Circle Icon={<FaTree />} text={'Spełnianie i wyprzedzanie oczekiwań i wymagań mieszkańców.'} />
+        <div className={`flex flex-col md:flex-row h-full p-2 md:p-10 lg:p-20 items-center font-bold`}>
+          <Circle Icon={<FaTree />} text={
+            <span className={`text-sm md:text-lg lg:text-xl max-w-60 text-center text-wrap`}>Spełnianie i <span className={`text-red-700`}>wyprzedzanie</span> oczekiwań i wymagań mieszkańców.</span>
+          } />
           <div className={`bg-red-500 w-1 h-24 md:h-1 md:w-full`}></div>
-          <Circle Icon={<FaPeopleGroup />} text={'W pełni połączone i zrównoważone systemy i usługi'} />
+          <Circle Icon={<FaPeopleGroup />} text={
+            <span className={`text-sm md:text-lg lg:text-xl max-w-60 text-center text-wrap`}> W pełni połączone i zrównoważone systemy i usługi </span>
+          } />
         </div>
       </section>
 

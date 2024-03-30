@@ -12,13 +12,13 @@ const Page = () => {
                     {
                         social_capital.map((el, index) => (
                             <div className={`flex gap-5 lg:max-w-60 lg:flex-col items-center lg:gap-10`} key={index}>
-                                <div className={`hidden sm:flex bg-slate-300/85 text-2xl p-5 sm:text-6xl sm:p-10 rounded-full`}>
+                                <div className={`hidden sm:flex ${index == 2 ? 'bg-red-500/85 text-white/80' : 'bg-slate-300/85'} text-2xl p-5 sm:text-6xl sm:p-10 rounded-full`}>
                                     {el.icon}
                                 </div>
-                                <div className={`flex flex-col gap-4 p-5 bg-slate-300/85 rounded-md lg:h-full`}>
+                                <div className={`flex flex-col gap-4 p-5 ${index == 2 ? 'bg-red-500/85 text-white/80' : 'bg-slate-300/85'}  rounded-md lg:h-full`}>
                                     <h3 className={`font-bold text-xl flex items-center gap-1`}>
                                         {el.title}
-                                        <div className={`flex bg-white/80 justify-center items-center p-2 rounded-full sm:hidden`}>
+                                        <div className={`flex bg-white/80 text-black justify-center items-center p-2 rounded-full sm:hidden`}>
                                             {el.icon}
                                         </div>
                                     </h3>

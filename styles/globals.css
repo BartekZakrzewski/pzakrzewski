@@ -32,6 +32,10 @@ html, body{
     opacity: 1;
   }
 }
+
+.bolden {
+  @apply text-red-600 font-bold
+}
  
 @layer base {
   :root {

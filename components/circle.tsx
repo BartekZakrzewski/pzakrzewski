@@ -2,7 +2,7 @@
 
 interface Props {
     Icon: React.ReactNode,
-    text: string
+    text: any
 }
 
 const Circle = ({Icon, text}: Props) => {
@@ -11,9 +11,7 @@ const Circle = ({Icon, text}: Props) => {
             <div className={`text-3xl md:text-5xl lg:text-6xl`}>
                 {Icon}
             </div>
-            <span className={`text-sm md:text-lg lg:text-xl max-w-60 text-center text-wrap`}>
-                {text}
-            </span>
+            {text}
         </div>
     );
 }
