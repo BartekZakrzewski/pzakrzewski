@@ -60,7 +60,7 @@ const Page = () => {
                 <Image src="/images/Graphic5.jpg"  alt="123" width={0} height={0} sizes="100vw" className={`w-[50%] lg:w-[25%] h-auto rounded-xl`} />
             </section>
 
-            <section>
+            {/* <section>
                 <h1 className={`text-white font-bold text-xl md:text-3xl xl:text-6xl relative before:w-20 before:h-2 md:before:w-24 md:before:h-2 xl:before:w-32 xl:before:h-3 before:bg-red-700 before:absolute before:-top-5 before:left-[50%] before:-translate-x-[50%] text-center mb-5`}>
                     Kalendarium ŁPC
                 </h1>
@@ -119,7 +119,7 @@ const Page = () => {
                     </div>
                 </div>
                 {/*==========MOBILE==========*/}
-                <div className={`lg:hidden grid grid-rows-4 p-10 pr-2 pl-10 bg-white/70 rounded-xl
+                {/* <div className={`lg:hidden grid grid-rows-4 p-10 pr-2 pl-10 bg-white/70 rounded-xl
                 relative before:absolute before:w-1 before:h-full before:bg-black before:left-2`}>
                     <div className={`relative flex pb-2 items-start justify-between
                     before:absolute before:w-4 before:aspect-square before:bg-black before:rounded-full before:-left-9 before:top-1`}>
@@ -183,9 +183,9 @@ const Page = () => {
                         </p>
                         <Image src="/images/Graphic9.png"  alt="123" width={0} height={0} sizes="100vw" className={`w-1/2 md:w-1/4 h-auto rounded-xl`} />
                     </div>
-                </div>
+                </div> */}
 
-            </section>
+            {/* </section> */}
         </div>
     )
 }
